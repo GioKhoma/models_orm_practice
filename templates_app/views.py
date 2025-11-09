@@ -29,10 +29,3 @@ def posts(request):
     }
 
     return render(request, 'templates_app/posts.html', context)
-
-
-from .models import Profile
-def profile_list(request):
-    profiles = Profile.objects.all()
-    context = {"profiles": profiles}
-    return render(request, "templates_app/profiles.html", context)
